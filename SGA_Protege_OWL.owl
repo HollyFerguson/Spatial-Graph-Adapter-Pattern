@@ -93,7 +93,6 @@
     <!-- http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Attribute -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Attribute">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#ContextualizedRelation"/>
         <rdfs:comment xml:lang="en">Types and Values are needed for the semantics for the same types of spatial objects are labeled differently schema to schema. Attribute must have exactly one Value and exactly one Type. It must be attached to exactly one SpatialInformationObject. Note that it is possible for two different SpatialInformationObjects to have attributes of the same Type and Value.</rdfs:comment>
     </owl:Class>
     
@@ -150,30 +149,6 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Attribute"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#ContextualizedRelation"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialObject"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Attribute"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Type"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Value"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#ContextualizedRelation"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Type"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Value"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialObject"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Type"/>
