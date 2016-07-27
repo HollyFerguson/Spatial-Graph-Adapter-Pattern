@@ -1,14 +1,4 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -16,30 +6,17 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Declaration>
-        <Class IRI="#Attribute"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ContextualizedRelation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SpatialObject"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SpatialRepresentationObject"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Type"/>
-    </Declaration>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="#Value"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#Attribute"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasContextRelation"/>
@@ -48,13 +25,28 @@
         <ObjectProperty IRI="#hasType"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasValue"/>
+        <Class IRI="#SpatialInformationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContextualizedRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAttribute"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refersTo"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SpatialObject"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#represents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasValue"/>
     </Declaration>
     <DisjointClasses>
         <Class IRI="#Attribute"/>
@@ -67,33 +59,33 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Attribute"/>
-        <Class IRI="#SpatialRepresentationObject"/>
+        <Class IRI="#SpatialInformationObject"/>
         <Class IRI="#Type"/>
         <Class IRI="#Value"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#ContextualizedRelation"/>
-        <Class IRI="#SpatialRepresentationObject"/>
+        <Class IRI="#SpatialInformationObject"/>
         <Class IRI="#Type"/>
         <Class IRI="#Value"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#SpatialInformationObject"/>
         <Class IRI="#SpatialObject"/>
-        <Class IRI="#SpatialRepresentationObject"/>
         <Class IRI="#Type"/>
         <Class IRI="#Value"/>
     </DisjointClasses>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#refersTo"/>
         <ObjectProperty IRI="#hasContextRelation"/>
+        <ObjectProperty IRI="#refersTo"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAttribute"/>
-        <Class IRI="#SpatialRepresentationObject"/>
+        <Class IRI="#SpatialInformationObject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContextRelation"/>
-        <Class IRI="#SpatialRepresentationObject"/>
+        <Class IRI="#SpatialInformationObject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasType"/>
@@ -117,7 +109,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#represents"/>
-        <Class IRI="#SpatialRepresentationObject"/>
+        <Class IRI="#SpatialInformationObject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAttribute"/>
@@ -137,7 +129,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refersTo"/>
-        <Class IRI="#SpatialRepresentationObject"/>
+        <Class IRI="#SpatialInformationObject"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#represents"/>
@@ -146,36 +138,36 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Attribute</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Types and Values are needed for the semantics for the same types of spatial objects are labeled differently schema to schema. Attribute must have exactly one Value and exactly one Type. It must be attached to exactly one SpatialInformationObject. Note that it is possible for two different SpatialInformationObjects to have attributes of the same Type and Value.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Types and Values are needed for the semantics for the same types of spatial objects are labeled differently schema to schema. Attribute must have exactly one Value and exactly one Type. It must be attached to exactly one SpatialInformationObject. Note that it is possible for two different SpatialInformationObjects to have attributes of the same Type and Value.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ContextualizedRelation</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Types and Values are needed for the semantics for the same types of spatial objects are labeled differently schema to schema. Attribute must have exactly one Value and exactly one Type. It must be attached to exactly one SpatialInformationObject. Note that it is possible for two different SpatialInformationObjects to have attributes of the same Type and Value. ContextualizedRelation must have exactly one Value and exactly one Type.  ContextualizedRelation refers to at least one SpatialInformationObject.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Types and Values are needed for the semantics for the same types of spatial objects are labeled differently schema to schema. Attribute must have exactly one Value and exactly one Type. It must be attached to exactly one SpatialInformationObject. Note that it is possible for two different SpatialInformationObjects to have attributes of the same Type and Value. ContextualizedRelation must have exactly one Value and exactly one Type.  ContextualizedRelation refers to at least one SpatialInformationObject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpatialInformationObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A SpatialInformationObject may have Attribute and may have ContextualizedRelation. Since Attributes and ContextualizedRelations have different descriptions in different data schema, these model classes were also chosen to work for any of the schemas used by our domain tools.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#SpatialObject</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An InformationObject represents exactly one SpatialObject.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#SpatialRepresentationObject</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A SpatialInformationObject may have Attribute and may have ContextualizedRelation. Since Attributes and ContextualizedRelations have different descriptions in different data schema, these model classes were also chosen to work for any of the schemas used by our domain tools.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An InformationObject represents exactly one SpatialObject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Type</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Our use of hasType makes the model more amenable to resolving the large variation of schema differences that exist; instead of subclassing we consider types to be instances of individuals so that we are not burdened by the decision to say that something is a subtype or not. Doing so would cause more hierarchical confusion instead of help in terms of its application. Nevertheless, having typing through properties does not preclude us from adding in the function of such a hierarchy later on.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Our use of hasType makes the model more amenable to resolving the large variation of schema differences that exist; instead of subclassing we consider types to be instances of individuals so that we are not burdened by the decision to say that something is a subtype or not. Doing so would cause more hierarchical confusion instead of help in terms of its application. Nevertheless, having typing through properties does not preclude us from adding in the function of such a hierarchy later on.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refersTo</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The refersTo relation is an inverse of hasContextRelation.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The refersTo relation is an inverse of hasContextRelation.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
 
