@@ -23,10 +23,7 @@
 
     <!-- http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasAttribute -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasAttribute">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Attribute"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasAttribute"/>
     
 
 
@@ -34,8 +31,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasContextRelation">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#refersTo"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#ContextualizedRelation"/>
     </owl:ObjectProperty>
     
 
@@ -52,19 +47,13 @@
 
     <!-- http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasValue -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasValue">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Attribute"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#ContextualizedRelation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#Value"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#hasValue"/>
     
 
 
     <!-- http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#refersTo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#refersTo">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#ContextualizedRelation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
         <rdfs:comment xml:lang="en">The refersTo relation is an inverse of hasContextRelation.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -72,10 +61,7 @@
 
     <!-- http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#represents -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#represents">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialInformationObject"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#SpatialObject"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/holly2012/ontologies/2016/SGA_Pattern#represents"/>
     
 
 
